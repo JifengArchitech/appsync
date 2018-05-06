@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 
 export default gql`
-mutation ($id: ID!, $name: String!, $email: String!, $phone: String, $address: String) {
-  createUser( input: {
+mutation ($id: ID!, $name: String, $email: String, $phone: String, $address: String) {
+  updateUser(input: {
     id: $id
     name: $name
     email: $email
@@ -17,4 +17,3 @@ mutation ($id: ID!, $name: String!, $email: String!, $phone: String, $address: S
     address
   }
 }`;
-
